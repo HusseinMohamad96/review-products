@@ -1,0 +1,19 @@
+<main class="max-w-7xl mx-auto px-4 py-10">
+  <section class="mb-10">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Top Picks of the Week</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <app-featured-item *ngFor="let item of featuredItems"
+                         [featuredItem]="item"></app-featured-item>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Explore Categories</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+      <div class="bg-gray-100 p-6 rounded-xl hover:bg-gray-200 cursor-pointer">Tech</div>
+      <div class="bg-gray-100 p-6 rounded-xl hover:bg-gray-200 cursor-pointer">Home</div>
+      <div class="bg-gray-100 p-6 rounded-xl hover:bg-gray-200 cursor-pointer">Health</div>
+      <div class="bg-gray-100 p-6 rounded-xl hover:bg-gray-200 cursor-pointer">Lifestyle</div>
+    </div>
+  </section>
+</main>

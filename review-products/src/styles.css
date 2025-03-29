@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme{
+  --animate-slide-down: slideDown 0.3s ease-out forwards;
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+}
