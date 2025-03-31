@@ -25,8 +25,17 @@ export class SubmitReviewComponent {
     avatarUrl: 'https://www.gravatar.com/avatar/?d=mp'
   }
 
+  toast = {
+    show: false,
+    message: 'Review submitted successfully!',
+    type: 'success'
+  };
+
+
   submitReview() {
     this.reviewService.featuredReviews.unshift(this.review)
+    this.toast.show = true
+    setTimeout(() => this.toast.show = false, 2000)
     this.review = {
       title: '',
       content: '',

@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SubmitReviewComponent } from './components/submit-review/submit-review.component';
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SubmitReviewComponent } from './components/submit-review/submit-review.
     SubmitReviewComponent,
     LandingPageComponent,
     HeaderComponent,
-    FeaturedReviewComponent
+    FeaturedReviewComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
