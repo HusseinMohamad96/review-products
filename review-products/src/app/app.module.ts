@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { SubmitReviewComponent } from './components/submit-review/submit-review.component';
 import { ToastComponent } from './components/toast/toast.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToastComponent } from './components/toast/toast.component';
     LandingPageComponent,
     HeaderComponent,
     FeaturedReviewComponent,
-    ToastComponent
+    ToastComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

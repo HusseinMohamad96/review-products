@@ -28,7 +28,7 @@ export class HeaderComponent {
     // },
     {
       title: 'About',
-      href: ''
+      href: 'about'
     }
   ]
 }
