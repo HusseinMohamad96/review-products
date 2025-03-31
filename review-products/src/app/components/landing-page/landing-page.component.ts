@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
               quality.`
     },
     {
-      mainImage: 'assets/images/laptop_3.webp',
+      mainImage: 'assets/images/laptop_6.webp',
       title: 'Best Budget Laptops',
       description: `Great performance under $500. Here's our top choice after rigorous testing.`
     },
