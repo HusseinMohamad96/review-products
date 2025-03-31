@@ -67,4 +67,5 @@
 
 <app-toast [message]="toast.message"
            [type]="toast.type"
-           [show]="toast.show"></app-toast>
+           [show]="toast.show"
+           *ngIf="toast.show"></app-toast>

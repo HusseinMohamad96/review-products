@@ -33,16 +33,26 @@ export class SubmitReviewComponent {
 
 
   submitReview() {
-    this.reviewService.featuredReviews.unshift(this.review)
-    this.toast.show = true
-    setTimeout(() => this.toast.show = false, 2000)
-    this.review = {
-      title: '',
-      content: '',
-      rating: 0,
-      reviewer: '',
-      date: new Date().toLocaleDateString(),
-      avatarUrl: 'https://www.gravatar.com/avatar/?d=mp'
+    if (this.review.title && this.review.content && this.review.reviewer) {
+      this.reviewService.featuredReviews.unshift(this.review)
+      this.toast.type = 'success'
+      this.toast.message = 'Review submitted successfully!'
+      this.toast.show = true
+      setTimeout(() => this.toast.show = false, 2000)
+      this.review = {
+        title: '',
+        content: '',
+        rating: 0,
+        reviewer: '',
+        date: new Date().toLocaleDateString(),
+        avatarUrl: 'https://www.gravatar.com/avatar/?d=mp'
+      }
+    }
+    else {
+      this.toast.type = 'error'
+      this.toast.message = 'Please fill out all of the fields!'
+      this.toast.show = true
+      setTimeout(() => this.toast.show = false, 2000)
     }
   }
 }
