@@ -14,7 +14,7 @@ export class ReviewService {
         'This is hands down the best purchase I’ve made this year. It’s sleek, reliable, and just works.',
       rating: 5,
       reviewer: 'Alex Carter',
-      date: 'March 25, 2025',
+      date: '22 March 2025',
       avatarUrl: 'https://i.pravatar.cc/100?img=12',
     },
     {
@@ -23,7 +23,7 @@ export class ReviewService {
         'I didn’t expect much at this price point, but this completely blew me away. Would recommend to anyone.',
       rating: 4,
       reviewer: 'Jamie Lin',
-      date: 'March 22, 2025',
+      date: '14 January 2025',
       avatarUrl: 'https://i.pravatar.cc/100?img=24',
     },
   ];

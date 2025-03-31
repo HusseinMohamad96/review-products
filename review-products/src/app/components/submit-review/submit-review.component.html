@@ -1,6 +1,16 @@
 <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md mt-10">
   <h2 class="text-2xl font-bold mb-6 text-gray-800">Write a Review</h2>
 
+  <div class="mb-4">
+    <label for="name"
+           class="block text-sm font-medium text-gray-700">Your Name</label>
+    <input type="text"
+           id="name"
+           class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+           [(ngModel)]="review.reviewer"
+           name="name" />
+  </div>
+
   <!-- Review Title -->
   <div class="mb-4">
     <label for="title"
@@ -48,7 +58,7 @@
 
   <!-- Submit Button -->
   <div class="mt-6">
-    <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+    <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition cursor-pointer"
             (click)="submitReview()">
       Submit Review
     </button>
