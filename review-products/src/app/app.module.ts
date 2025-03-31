@@ -9,6 +9,7 @@ import { FeaturedItemComponent } from './components/featured-item/featured-item.
 import { FooterComponent } from './components/footer/footer.component';
 import { SubmitReviewComponent } from './components/submit-review/submit-review.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     FooterComponent,
     FeaturedItemComponent,
     SubmitReviewComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
