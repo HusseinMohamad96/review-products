@@ -12,23 +12,23 @@ export class HeaderComponent {
   navItems: { title: string, href: string }[] = [
     {
       title: 'Home',
-      href: '#'
+      href: ''
     },
     {
       title: 'Write a Review',
-      href: '/#/submit-review'
+      href: 'submit-review'
     },
-    {
-      title: 'Best Picks',
-      href: '#'
-    },
-    {
-      title: 'Categories',
-      href: '#'
-    },
+    // {
+    //   title: 'Best Picks',
+    //   href: ''
+    // },
+    // {
+    //   title: 'Categories',
+    //   href: ''
+    // },
     {
       title: 'About',
-      href: '#'
+      href: ''
     }
   ]
 }

@@ -1,4 +1,4 @@
-<header class="bg-gray-100 border-b border-gray-300 shadow-sm">
+<header class="fixed top-0 left-0 w-full bg-gray-100 border-b border-gray-300 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-gray-900">ProductReview</h1>
     <button class="md:hidden text-gray-700"
@@ -16,18 +16,9 @@
     </button>
     <nav class="hidden md:flex space-x-6 text-sm font-medium">
       <div *ngFor="let item of navItems">
-        <a [href]="item.href"
+        <a [routerLink]="item.href"
            class="text-gray-700 hover:text-black">{{item.title}}</a>
       </div>
-
-      <!-- <a href="/#/submit-review"
-         class="text-gray-700 hover:text-black">Write a Review</a>
-      <a href="#"
-         class="text-gray-700 hover:text-black">Best Picks</a>
-      <a href="#"
-         class="text-gray-700 hover:text-black">Categories</a>
-      <a href="#"
-         class="text-gray-700 hover:text-black">About</a> -->
     </nav>
   </div>
   <div *ngIf="isMenuOpen"
@@ -36,8 +27,9 @@
          class="relative top-0 w-full bg-gray-100 transition-transform duration-300 ease-in-out transform animate-slide-down z-40">
       <nav class="flex flex-col items-center justify-center space-y-6 py-12 text-sm font-medium">
         <div *ngFor="let item of navItems">
-          <a [href]="item.href"
-             class="text-gray-700 hover:text-black">{{item.title}}</a>
+          <div [routerLink]="item.href"
+               class="text-gray-700 hover:text-black cursor-pointer"
+               (click)="isMenuOpen = false">{{item.title}}</div>
         </div>
       </nav>
     </div>
