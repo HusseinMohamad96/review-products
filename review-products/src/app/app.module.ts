@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeaturedItemComponent } from './components/featured-item/featured-item.component';
+import { FeaturedReviewComponent } from './components/featured-review/featured-review.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SubmitReviewComponent } from './components/submit-review/submit-review.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { SubmitReviewComponent } from './components/submit-review/submit-review.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
     FeaturedItemComponent,
     SubmitReviewComponent,
     LandingPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    FeaturedReviewComponent
   ],
   imports: [
     BrowserModule,

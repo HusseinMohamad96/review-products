@@ -1,0 +1,38 @@
+<div class="bg-white border border-gray-200 shadow-md rounded-xl p-6 w-full">
+  <!-- Title -->
+  <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ review.title }}</h3>
+
+  <!-- Star Rating -->
+  <div class="flex items-center mb-4">
+    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+      <svg class="w-6 h-6"
+           [ngClass]="review.rating >= star ? 'text-yellow-400' : 'text-gray-300'"
+           fill="currentColor"
+           viewBox="0 0 20 20"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.221 3.755a1
+          1 0 00.95.69h3.946c.969 0 1.371 1.24.588
+          1.81l-3.192 2.32a1 1 0 00-.364
+          1.118l1.222 3.755c.3.922-.755
+          1.688-1.54 1.118l-3.192-2.32a1 1 0
+          00-1.175 0l-3.192 2.32c-.785.57-1.84-.196-1.54-1.118l1.222-3.755a1
+          1 0 00-.364-1.118l-3.192-2.32c-.783-.57-.38-1.81.588-1.81h3.946a1
+          1 0 00.95-.69l1.221-3.755z" />
+      </svg>
+    </ng-container>
+  </div>
+
+  <!-- Review Text -->
+  <p class="text-gray-700 text-base mb-4">{{ review.content }}</p>
+
+  <!-- Reviewer Info -->
+  <div class="flex items-center space-x-4 mt-6">
+    <img [src]="review.avatarUrl"
+         alt="Reviewer Avatar"
+         class="w-10 h-10 rounded-full object-cover" />
+    <div>
+      <p class="text-sm font-medium text-gray-800">{{ review.reviewer }}</p>
+      <p class="text-xs text-gray-500">{{ review.date }}</p>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FeaturedItem } from '../../models/featured-item.interface';
+import { ReviewService } from '../../services/review.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,7 +8,8 @@ import { FeaturedItem } from '../../models/featured-item.interface';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
+  constructor(private reviewService: ReviewService) { }
   featuredItems: FeaturedItem[] = [
     {
       mainImage: 'assets/images/headphones_1.jpg',
@@ -26,4 +28,10 @@ export class LandingPageComponent {
       description: `A deep dive into the best machines for every kind of coffee drinker.`
     },
   ]
+
+  featuredReviews: any = []
+
+  ngOnInit() {
+    this.featuredReviews = this.reviewService.featuredReviews
+  }
 }
